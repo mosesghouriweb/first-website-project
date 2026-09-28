@@ -1,225 +1,371 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Moses Ghouri | Personal Website</title>
+<title>Moses Ghouri | Web Developer</title>
 
-    <style>
-        * {
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
 
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f4f7fb;
-            color: #222;
-        }
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #222;
+}
 
-        nav {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background: #111827;
-            padding: 18px 10px;
-            text-align: center;
-        }
+/* NAVIGATION */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #101827;
+    padding: 18px 10px;
+    text-align: center;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 14px;
-            font-size: 17px;
-            font-weight: bold;
-        }
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 12px;
+    font-size: 17px;
+    font-weight: bold;
+}
 
-        nav a:hover {
-            color: #60a5fa;
-        }
+nav a:hover {
+    color: #60a5fa;
+}
 
-        .hero {
-    min-height: 78vh;
+/* HERO */
+.hero {
+    min-height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 70px 20px;
+    padding: 60px 20px;
     background: linear-gradient(135deg, #2563eb, #1e40af);
     color: white;
 }
 
-        .hero h1 {
-            font-size: 52px;
-            margin: 0 0 20px;
-        }
+.hero-small {
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
 
-        .hero p {
-            font-size: 21px;
-            margin-bottom: 30px;
-        }
+.hero h1 {
+    font-size: 52px;
+    margin-bottom: 20px;
+}
 
-        .hero-button {
-            display: inline-block;
-            padding: 14px 28px;
-            background: white;
-            color: #2563eb;
-            text-decoration: none;
-            border-radius: 30px;
-            font-weight: bold;
-        }
+.hero h1 span {
+    color: #bfdbfe;
+}
 
-        .hero-button:hover {
-            background: #e5e7eb;
-        }
+.hero p {
+    max-width: 700px;
+    font-size: 20px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
 
-        .section {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 45px 30px;
-            background: white;
-            border-radius: 18px;
-            text-align: center;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-        }
+.button {
+    display: inline-block;
+    padding: 15px 30px;
+    background: white;
+    color: #2563eb;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 17px;
+}
 
-        .section h2 {
-            font-size: 34px;
-            margin-bottom: 20px;
-        }
+.button:hover {
+    background: #dbeafe;
+}
 
-        .section p {
-            font-size: 18px;
-            line-height: 1.7;
-        }
+/* GENERAL SECTIONS */
+section {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 60px 30px;
+    background: white;
+    border-radius: 20px;
+}
 
-        .contact-button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 14px 28px;
-            background: #2563eb;
-            color: white;
-            text-decoration: none;
-            border-radius: 10px;
-            font-weight: bold;
-        }
+section h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px;
+}
 
-        .contact-button:hover {
-            background: #1d4ed8;
-        }
+section p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
 
-        footer {
-            margin-top: 60px;
-            padding: 25px;
-            background: #111827;
-            color: white;
-            text-align: center;
-        }
+/* SERVICES */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
 
-        @media (max-width: 600px) {
+.card {
+    padding: 30px 20px;
+    background: #f4f7fb;
+    border-radius: 15px;
+    text-align: center;
+}
 
-            nav a {
-                margin: 0 7px;
-                font-size: 15px;
-            }
+.card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
 
-            .hero {
-                min-height: 75vh;
-                padding: 50px 15px;
-            }
+.card p {
+    font-size: 16px;
+}
 
-            .hero h1 {
-                font-size: 40px;
-            }
+/* PROJECTS */
+.project {
+    background: #f4f7fb;
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
 
-            .hero p {
-                font-size: 18px;
-            }
+.project h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
 
-            .section {
-                margin: 25px 12px;
-                padding: 35px 20px;
-            }
+/* CONTACT */
+.contact {
+    text-align: center;
+}
 
-            .section h2 {
-                font-size: 29px;
-            }
-        }
-    </style>
+.contact-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.contact-button:hover {
+    background: #1e40af;
+}
+
+/* FOOTER */
+footer {
+    background: #101827;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 5px;
+}
+
+/* MOBILE */
+@media (max-width: 700px) {
+
+    nav a {
+        margin: 0 7px;
+        font-size: 15px;
+    }
+
+    .hero {
+        min-height: 85vh;
+        padding: 50px 20px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    section {
+        margin: 25px 15px;
+        padding: 40px 20px;
+    }
+
+    section h2 {
+        font-size: 30px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
 </head>
 
 <body>
 
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-    </nav>
+<!-- NAVIGATION -->
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</nav>
 
-    <section class="hero" id="home">
+<!-- HOME -->
+<section class="hero" id="home">
 
     <p class="hero-small">WELCOME TO MY WEBSITE</p>
 
-    <h1>Hi, I'm <span>Moses Ghouri</span></h1>
+    <h1>
+        Hi, I'm <span>Moses Ghouri</span>
+    </h1>
 
-    <p class="hero-text">
+    <p>
         I'm a beginner web developer learning to create
-        modern and professional websites.
+        modern, professional and useful websites.
     </p>
 
-    <p class="hero-subtext">
-        I'm building my skills, creating projects,
-        and turning ideas into websites.
-    </p>
-
-    <a class="hero-button" href="#about">
-        Explore My Website
+    <a class="button" href="#projects">
+        View My Work
     </a>
 
 </section>
 
-    <section class="section" id="about">
-        <h2>About Me</h2>
+<!-- ABOUT -->
+<section id="about">
 
+    <h2>About Me</h2>
+
+    <p>
+        Hello! I'm Moses Ghouri, a beginner web developer
+        passionate about learning how websites are designed
+        and built.
+    </p>
+
+    <p>
+        I'm currently developing my skills in HTML, CSS,
+        and web development while creating real projects
+        to improve my experience.
+    </p>
+
+    <p>
+        My goal is to build modern, useful websites and
+        continue improving my skills through practice
+        and new projects.
+    </p>
+
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+
+    <h2>What I Can Do</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>🌐 Website Design</h3>
+            <p>
+                Creating clean and responsive website
+                layouts for different types of projects.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>💻 HTML & CSS</h3>
+            <p>
+                Building webpages using HTML and CSS
+                with a focus on simple and modern designs.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>📱 Responsive Design</h3>
+            <p>
+                Creating websites that work properly
+                on phones, tablets and computers.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+
+    <h2>My Projects</h2>
+
+    <div class="project">
+        <h3>Personal Portfolio Website</h3>
         <p>
-    Hello! I'm Moses Ghouri, a beginner web developer
-    passionate about learning how websites are designed
-    and built.
-</p>
+            This website is one of my first web development
+            projects. I created it to practice HTML, CSS
+            and responsive web design.
+        </p>
+    </div>
 
-<p>
-    I'm currently developing my skills in HTML, CSS,
-    and web development while creating real projects
-    to improve my experience.
-</p>
+    <div class="project">
+        <h3>Future Client Projects</h3>
+        <p>
+            I'm continuing to learn and build new projects
+            so I can create websites for real clients.
+        </p>
+    </div>
 
-<p>
-    My goal is to build modern, useful websites and
-    continue growing my skills through practice and
-    new projects.
-</p>
+</section>
 
-    <section class="section" id="contact">
+<!-- CONTACT -->
+<section class="contact" id="contact">
+
     <h2>Let's Work Together</h2>
 
     <p>
         Have a project or website idea?
-        I'd love to hear about it and help turn your idea into a website.
     </p>
 
-    <a class="contact-button" href="mailto:mosesghouri522@gmail.com">
+    <p>
+        I'd love to hear about it and help turn your
+        idea into a website.
+    </p>
+
+    <a
+        class="contact-button"
+        href="mailto:mosesghouri522@gmail.com">
         Contact Me
     </a>
+
 </section>
 
-    <footer>
-        <p>© 2026 Moses Ghouri</p>
-    </footer>
+<!-- FOOTER -->
+<footer>
+
+    <p>© 2026 Moses Ghouri</p>
+
+    <p>
+        Beginner Web Developer
+    </p>
+
+</footer>
 
 </body>
-
 </html>
